@@ -57,7 +57,7 @@ def find_closest_pattern_match(user_input):
 def check_input(user_input):
     patterns = [
         r's\d+\s*=\s*-?\d+(\.\d+)?',
-        r's\d+\s*=\s*dot\(v\d+\s*,\s*v\d+\)',
+        r's\d+\s*=\s*dot\(\s*v\d+\s*,\s*v\d+\s*\)',
         r's\d+\s*=\s*s\d+\s*-\s*s\d+',
         r's\d+\s*=\s*s\d+\s*\*\s*s\d+',
         r'v\d+\s*=\s*s\d+\s*\*\s*v\d+',
