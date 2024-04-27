@@ -50,4 +50,4 @@ if __name__ == "__main__":
     with open(file, 'r') as f:
         code_str = f.read()
 
-    evaluate(code_str) + "\n"
+    print(evaluate(code_str), "\n")
