@@ -39,3 +39,15 @@ def evaluate(code_string):
         print('The output is:')
         print(result.stdout)
         return 0
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) != 2:
+        file = '/dev/stdin'
+    else:
+        file = sys.argv[1]
+    with open(file, 'r') as f:
+        code_str = f.read()
+
+    evaluate(code_str) + "\n"
