@@ -1,13 +1,18 @@
 import subprocess
 from converter import generate_protobuf_instructions
 import re
+import os
 
 def evaluate(code_string):
     # generate alg
     alg = generate_protobuf_instructions(code_string)
 
+    # get the location directory of this script
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+
     # create shell script
     command = f'''
+    cd "{script_dir}"; \\
     bazel run -c opt :run_evaluation_experiment -- \\
     --algorithm="\\
     {alg}
